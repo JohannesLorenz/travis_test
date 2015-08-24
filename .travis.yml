@@ -1,0 +1,11 @@
+language: cpp
+compiler:
+  - clang++
+addons:
+  apt:
+    sources:
+      - boost-latest
+    packages:
+      - libboost1.55-all-dev
+      - cmake
+script: mkdir build && cd build && cmake .. && make VERBOSE=1 && cd ..
